@@ -45,7 +45,6 @@ const Movies: FC = () => {
           return (
             <div key={key} className="my-3">
               <ShowMovie
-                id={mv.id}
                 name={mv.name}
                 img={mv.img}
                 year={mv.year}

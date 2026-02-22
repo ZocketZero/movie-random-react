@@ -1,7 +1,6 @@
 import { FC, useState } from "react";
 
 type ShowMovieInput = {
-    id: number;
     name: string;
     img: string;
     year: string;
@@ -9,7 +8,7 @@ type ShowMovieInput = {
     categories: string;
     tag: string;
 }
-const ShowMovie: FC<ShowMovieInput> = ({ id, img, name, year, trailer, categories, tag }) => {
+const ShowMovie: FC<ShowMovieInput> = ({ img, name, year, trailer, categories, tag }) => {
     const [showTrailer, setShowTrailer] = useState(false)
     return <div className="md:whitespace-nowrap overflow-hidden text-center text-slate-800 dark:text-slate-200 flex items-center flex-col">
         <a target={"_blank"} className="hover:underline" title="คลิกเพื่อค้นหาใน google" href={`https://www.google.co.th/search?q=${name}`}>
