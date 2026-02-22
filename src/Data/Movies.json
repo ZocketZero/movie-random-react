@@ -174,5 +174,21 @@
         "trailer": "https://www.youtube.com/embed/QD6cy4PBQPI",
         "categories": "adventure, comedy-drama",
         "tag": "ผจญภัย, ท่องเทีียว, การใช้ชีวิต, ความหมาย, สถานที่, สวยงาม"
+    },
+    {
+        "name": "In Time",
+        "img": "https://m.media-amazon.com/images/M/MV5BMjA3NzI1ODc1MV5BMl5BanBnXkFtZTcwMzI5NjQwNg@@._V1_.jpg",
+        "year": "2011",
+        "trailer": "https://www.youtube.com/embed/YRSBiTF3wNw",
+        "categories": "action, sci-fi, cyberpunk, thriller",
+        "tag": "ต่อสู้, ชนชั้น, การหลบหนี, เวลา, ความหมาย"
+    },
+    {
+        "name": "Mr.Robot",
+        "img": "https://m.media-amazon.com/images/M/MV5BOTg4NTBiZDAtZTc0YS00NzZlLTg4Y2ItNGQ3M2ZlMDM5MWQzXkEyXkFqcGc@._V1_.jpg",
+        "year": "2025",
+        "trailer": "https://www.youtube.com/embed/p0flghBLUSE",
+        "categories": "Cyber Thriller, Psychological Drama, Psychological Thriller, Crime, Drama, Thriller",
+        "tag": "แฮก, โจรกรรม, อาชญากรรม, คอมพิวเตอร์, ชนชั้น, top 1%"
     }
 ]
