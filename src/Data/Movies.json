@@ -1,7 +1,7 @@
 [
   {
     "name": "Tomorrow i will date with yesterday’s you",
-    "img": "https://s.isanook.com/mv/0/ud/13/65113/2TOMOROWPOSTER28X40inchesTH.jpg",
+    "img": "/poster/Tomorrow i will date with yesterday’s you.webp",
     "year": "2016",
     "trailer": "https://www.youtube.com/embed/QViRFUq5wPs",
     "categories": "Drama, Fantasy, Romance, ดราม่า, แฟนตาซี, โรแมนติก",
@@ -9,7 +9,7 @@
   },
   {
     "name": "Let me eat your pancreas",
-    "img": "https://m.media-amazon.com/images/M/MV5BODg1NzA2ZGEtNDMxMS00MjNjLTkxMDItMGMxNTQyNTAxNTQyXkEyXkFqcGc@._V1_.jpg",
+    "img": "/poster/Let me eat your pancreas.webp",
     "year": "2017",
     "trailer": "https://www.youtube.com/embed/UORJkrOIflU",
     "categories": "Drama, Romance, ดราม่า, โรแมนติก",
@@ -17,7 +17,7 @@
   },
   {
     "name": "100th love with you",
-    "img": "https://m.media-amazon.com/images/M/MV5BNGVmZjk3YWMtM2M3OS00YjE4LWJjODAtOGUwYWU5MDY1NDM2XkEyXkFqcGc@._V1_.jpg",
+    "img": "/poster/100th love with you.webp",
     "year": "2017",
     "trailer": "https://www.youtube.com/embed/iMbch7uvboI",
     "categories": "Drama, Romance, ดราม่า, โรแมนติก",
@@ -25,7 +25,7 @@
   },
   {
     "name": "the garden of words",
-    "img": "https://m.media-amazon.com/images/M/MV5BYjdiMDdlMDItOGM4Ny00YmE4LTk0MTEtMGRhM2Y4OWZkZDZkXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+    "img": "/poster/the garden of words.webp",
     "year": "2013",
     "trailer": "https://www.youtube.com/embed/udDIkl6z8X0",
     "categories": "Drama, ดราม่า",
@@ -33,7 +33,7 @@
   },
   {
     "name": "your name",
-    "img": "https://m.media-amazon.com/images/M/MV5BMjI1ODZkYTgtYTY3Yy00ZTJkLWFkOTgtZDUyYWM4MzQwNjk0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+    "img": "/poster/your name.webp",
     "year": "2016",
     "trailer": "https://www.youtube.com/embed/mPsjLnEtJZI",
     "categories": "Fantasy, Romance, แฟนตาซี, โรแมนติก",
@@ -41,7 +41,7 @@
   },
   {
     "name": "5 centimeters per second",
-    "img": "https://m.media-amazon.com/images/M/MV5BODJhZDU1MDYtMDQ0NS00N2JmLWI2ZDAtMGNmN2RmNWJhNzQ5L2ltYWdlXkEyXkFqcGdeQXVyNjY1OTY4MTk@._V1_.jpg",
+    "img": "/poster/5 centimeters per second.webp",
     "year": "2007",
     "trailer": "https://www.youtube.com/embed/iPsu_sk-e7Q",
     "categories": "Drama, Romance, ดราม่า, โรแมนติก",
@@ -49,7 +49,7 @@
   },
   {
     "name": "Spirited away",
-    "img": "https://upload.wikimedia.org/wikipedia/th/3/30/Spirited_Away_poster.JPG",
+    "img": "/poster/Spirited away.webp",
     "year": "2001",
     "trailer": "https://www.youtube.com/embed/ByXuk9QqQkk",
     "categories": "fantasy, adventure, แฟนตาซี, ผจญภัย",
@@ -57,7 +57,7 @@
   },
   {
     "name": "Hotarubi no mori e",
-    "img": "https://www.metalbridges.com/wp-content/uploads/2015/11/Hotarubi-8.jpg",
+    "img": "/poster/Hotarubi no mori e.webp",
     "year": "2011",
     "trailer": "https://www.youtube.com/embed/zOc3pbvFAww",
     "categories": "Drama, Fantasy, ดราม่า, แฟนตาซี",
@@ -65,7 +65,7 @@
   },
   {
     "name": "I want to eat your pancreas",
-    "img": "https://m.media-amazon.com/images/M/MV5BNDM4MWE3NGQtODlkYS00NWU5LTg3ZjMtMTEyNjljOWI4NWIxXkEyXkFqcGdeQXVyNzkzODk2Mzc@._V1_FMjpg_UX1000_.jpg",
+    "img": "/poster/I want to eat your pancreas.webp",
     "year": "2018",
     "trailer": "https://www.youtube.com/embed/MmoBvmJA9XI",
     "categories": "Drama, Romance, ดราม่า, โรแมนติก",
@@ -73,7 +73,7 @@
   },
   {
     "name": "The Little Prince",
-    "img": "https://m.media-amazon.com/images/M/MV5BNjg0OTM5OTQyNV5BMl5BanBnXkFtZTgwNDg5NDQ0NTE@._V1_.jpg",
+    "img": "/poster/The Little Prince.webp",
     "year": "2015",
     "trailer": "https://www.youtube.com/embed/fEPqgSNLfK8",
     "categories": "Fantasy, แฟนตาซี",
@@ -81,7 +81,7 @@
   },
   {
     "name": "Coco",
-    "img": "https://m.media-amazon.com/images/M/MV5BYjQ5NjM0Y2YtNjZkNC00ZDhkLWJjMWItN2QyNzFkMDE3ZjAxXkEyXkFqcGdeQXVyODIxMzk5NjA@._V1_.jpg",
+    "img": "/poster/Coco.webp",
     "year": "2017",
     "trailer": "https://www.youtube.com/embed/Ga6RYejo6Hk",
     "categories": "fantasy, adventure, แฟนตาซี, ผจญภัย",
@@ -89,7 +89,7 @@
   },
   {
     "name": "Bridge to terabithia",
-    "img": "https://lumiere-a.akamaihd.net/v1/images/p_bridgetoterabithia_19754_77904a58.jpeg",
+    "img": "/poster/Bridge to terabithia.webp",
     "year": "2007",
     "trailer": "https://www.youtube.com/embed/T2TDSEG57hI",
     "categories": "Drama, Fantasy, adventure, ดราม่า, แฟนตาซี, ผจญภัย",
@@ -97,7 +97,7 @@
   },
   {
     "name": "about time",
-    "img": "https://m.media-amazon.com/images/M/MV5BMTA1ODUzMDA3NzFeQTJeQWpwZ15BbWU3MDgxMTYxNTk@._V1_.jpg",
+    "img": "/poster/about time.webp",
     "year": "2013",
     "trailer": "https://www.youtube.com/embed/u2PUMA6nFWk",
     "categories": "Fantasy, Romance, แฟนตาซี, โรแมนติก",
@@ -105,7 +105,7 @@
   },
   {
     "name": "Me before you",
-    "img": "https://m.media-amazon.com/images/M/MV5BMTQ2NjE4NDE2NV5BMl5BanBnXkFtZTgwOTcwNDE5NzE@._V1_.jpg",
+    "img": "/poster/Me before you.webp",
     "year": "2016",
     "trailer": "https://www.youtube.com/embed/h2niFQw5ZlQ",
     "categories": "Romance, Life, โรแมนติก, ชีวิต",
@@ -113,7 +113,7 @@
   },
   {
     "name": "A star is born",
-    "img": "https://m.media-amazon.com/images/M/MV5BNmE5ZmE3OGItNTdlNC00YmMxLWEzNjctYzAwOGQ5ODg0OTI0XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
+    "img": "/poster/A star is born.webp",
     "year": "2018",
     "trailer": "https://www.youtube.com/embed/e-7y74NidD8",
     "categories": "Romance, Musicial, โรแมนติก, เพลง",
@@ -121,7 +121,7 @@
   },
   {
     "name": "แฟนเดย์..แฟนกันแค่วันเดียว",
-    "img": "https://s.isanook.com/mv/0/ud/12/62601/aw_poster_fanday_theme_a_cut_1_-_m.jpg",
+    "img": "/poster/แฟนเดย์..แฟนกันแค่วันเดียว.webp",
     "year": "2016",
     "trailer": "https://www.youtube.com/embed/OPp2CoLdXcc",
     "categories": "Romance, Life, โรแมนติก, ชีวิต",
@@ -129,7 +129,7 @@
   },
   {
     "name": "Forrest gump",
-    "img": "https://m.media-amazon.com/images/M/MV5BNWIwODRlZTUtY2U3ZS00Yzg1LWJhNzYtMmZiYmEyNmU1NjMzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg",
+    "img": "/poster/Forrest gump.webp",
     "year": "1994",
     "trailer": "https://www.youtube.com/embed/bLvqoHBptjg",
     "categories": "Romance, Life, โรแมนติก, ชีวิต",
@@ -137,7 +137,7 @@
   },
   {
     "name": "blade runner 2049",
-    "img": "https://m.media-amazon.com/images/M/MV5BNzA1Njg4NzYxOV5BMl5BanBnXkFtZTgwODk5NjU3MzI@._V1_FMjpg_UX1000_.jpg",
+    "img": "/poster/blade runner 2049.webp",
     "year": "2017",
     "trailer": "https://www.youtube.com/embed/gCcx85zbxz4",
     "categories": "sci-fi, action, ไซไฟ, แอ็คชั่น",
@@ -145,7 +145,7 @@
   },
   {
     "name": "all quiet on the western front",
-    "img": "https://m.media-amazon.com/images/M/MV5BMzM4ZDJhYjYtZGY5Ny00NTk0LWI4ZTYtNjczZDFiMGI2ZjEzXkEyXkFqcGdeQXVyNjc5NjEzNA@@._V1_FMjpg_UX1000_.jpg",
+    "img": "/poster/all quiet on the western front.webp",
     "year": "2022",
     "trailer": "https://www.youtube.com/embed/hf8EYbVxtCY",
     "categories": "War, action, สงคราม, แอ็คชั่น",
@@ -153,7 +153,7 @@
   },
   {
     "name": "rurouni kenshin the beginning",
-    "img": "https://upload.wikimedia.org/wikipedia/en/5/57/Rurouni_Kenshin_The_Beginning.jpg",
+    "img": "/poster/rurouni kenshin the beginning.webp",
     "year": "2021",
     "trailer": "https://www.youtube.com/embed/McqDy8GbvCg",
     "categories": "action, Life, แอ็คชั่น, ชีวิต",
@@ -161,7 +161,7 @@
   },
   {
     "name": "your lie in april 2016",
-    "img": "https://m.media-amazon.com/images/M/MV5BZjA4ZjgwOGQtODZiMS00Njg1LTlhNTAtM2EzYmE3YTczZWY3XkEyXkFqcGdeQXVyMjI5MjU5OTI@._V1_.jpg",
+    "img": "/poster/your lie in april 2016.webp",
     "year": "2016",
     "trailer": "https://www.youtube.com/embed/FLS4TdJPFVQ",
     "categories": "Romance, Musicial, โรแมนติก, เพลง",
@@ -169,7 +169,7 @@
   },
   {
     "name": "The Secret Life of Walter Mitty",
-    "img": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fcdn.collider.com%2Fwp-content%2Fuploads%2Fthe-secret-life-of-walter-mitty-poster-mountain.jpg",
+    "img": "/poster/The Secret Life of Walter Mitty.webp",
     "year": "2013",
     "trailer": "https://www.youtube.com/embed/QD6cy4PBQPI",
     "categories": "adventure, comedy-drama",
@@ -177,7 +177,7 @@
   },
   {
     "name": "In Time",
-    "img": "https://m.media-amazon.com/images/M/MV5BMjA3NzI1ODc1MV5BMl5BanBnXkFtZTcwMzI5NjQwNg@@._V1_.jpg",
+    "img": "/poster/In Time.webp",
     "year": "2011",
     "trailer": "https://www.youtube.com/embed/YRSBiTF3wNw",
     "categories": "action, sci-fi, cyberpunk, thriller",
@@ -185,7 +185,7 @@
   },
   {
     "name": "Mr.Robot",
-    "img": "https://m.media-amazon.com/images/M/MV5BOTg4NTBiZDAtZTc0YS00NzZlLTg4Y2ItNGQ3M2ZlMDM5MWQzXkEyXkFqcGc@._V1_.jpg",
+    "img": "/poster/Mr.Robot.webp",
     "year": "2025",
     "trailer": "https://www.youtube.com/embed/p0flghBLUSE",
     "categories": "Cyber Thriller, Psychological Drama, Psychological Thriller, Crime, Drama, Thriller",
@@ -193,7 +193,7 @@
   },
   {
     "name": "Guardian: The Lonely and Great God",
-    "img": "https://m.media-amazon.com/images/M/MV5BNWIyNTA3MmItNzY5ZS00NmZhLThjMWYtZjIxYzllZWU5YWIzXkEyXkFqcGc@._V1_.jpg",
+    "img": "/poster/Guardian: The Lonely and Great God.webp",
     "year": "2016",
     "trailer": "https://www.youtube.com/embed/S94ukM8C17A",
     "categories": "Drama, Comedy, Fantasy, Romance",
