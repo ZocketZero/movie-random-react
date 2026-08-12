@@ -5,7 +5,7 @@ const GithubIcon: FC = () => {
         <div className="fixed bottom-0 p-1 right-0 opacity-90 hover:opacity-100 transition-all">
             <a
                 target="_blank"
-                href="https://github.com/Arikato111/movie-random-react"
+                href="https://github.com/ZocketZero/movie-random-react"
                 title="ดู source code บน Github"
             >
                 <div className="inline-block w-12 fill-black dark:fill-white">
