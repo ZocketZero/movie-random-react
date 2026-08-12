@@ -5,10 +5,19 @@ type LoadingStatusInput = {
 }
 
 const LoadingStatus: FC<LoadingStatusInput> = ({ loadState }) => {
-    return <div className="bg-zinc-100 my-3 text-center  w-[60vw] sm:w-[20vw] h-2 rounded-lg border border-emerald-400 dark:border-white box-content">
-        <div style={{ width: `${loadState}%` }} className="rounded-lg bg-pink-300 dark:bg-black h-2 text-center"></div>
-        <div className="my-1 text-center text-slate-800 dark:text-white">กำลังประมวลผล {loadState}%</div>
-    </div>
+    return (
+        <div className="flex flex-col items-center gap-3 fade-up">
+            <div className="progress-track">
+                <div className="progress-fill" style={{ width: `${loadState}%` }} />
+            </div>
+            <p className="text-sm font-medium text-slate-500 dark:text-slate-400 tabular-nums">
+                กำลังประมวลผล&nbsp;
+                <span className="text-indigo-500 dark:text-indigo-400 font-semibold">
+                    {loadState}%
+                </span>
+            </p>
+        </div>
+    );
 }
 
 export default LoadingStatus;

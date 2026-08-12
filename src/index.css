@@ -2,8 +2,247 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ─── Design Tokens ──────────────────────────────────────────── */
+:root {
+  --accent:        220 100% 60%;      /* electric blue */
+  --accent-warm:   38  95%  58%;      /* amber / cinema gold */
+  --surface-glass: rgba(255,255,255,0.55);
+  --blur:          16px;
+  --radius:        14px;
+  --transition:    0.22s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark {
+  --surface-glass: rgba(20,20,30,0.65);
+}
+
+/* ─── Base ───────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', 'Noto Sans Thai', system-ui, sans-serif;
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  -webkit-font-smoothing: antialiased;
+  @apply bg-stone-50 dark:bg-[#0d0d14] text-slate-800 dark:text-slate-100;
+  min-height: 100dvh;
+}
+
+/* ─── Page frame ─────────────────────────────────────────────── */
 @layer components {
-    .frame {
-        @apply pt-10 min-h-screen bg-gradient-to-tr sm:bg-gradient-to-r from-pink-300 via-white to-emerald-300 dark:from-black dark:to-black;
-    }
+  .frame {
+    @apply min-h-screen pt-6 pb-24;
+    background: var(--page-bg);
+  }
+}
+
+/* Light page background — soft warm neutral */
+.light-bg {
+  background: linear-gradient(135deg, #f5f3ff 0%, #faf9f7 50%, #f0fdf4 100%);
+}
+
+/* Dark page background — cinematic deep navy/charcoal */
+.dark-bg {
+  background: radial-gradient(ellipse at 20% 0%, #1a1040 0%, #0d0d14 55%, #0b1220 100%);
+}
+
+/* ─── Glass card ─────────────────────────────────────────────── */
+.glass {
+  background: var(--surface-glass);
+  backdrop-filter: blur(var(--blur));
+  -webkit-backdrop-filter: blur(var(--blur));
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: var(--radius);
+}
+.dark .glass {
+  border-color: rgba(255,255,255,0.07);
+}
+
+/* ─── Movie card ─────────────────────────────────────────────── */
+.movie-card {
+  @apply relative overflow-hidden rounded-2xl cursor-pointer;
+  background: rgba(255,255,255,0.6);
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07), 0 1px 2px rgba(0,0,0,0.04);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.dark .movie-card {
+  background: rgba(30,30,50,0.7);
+  border-color: rgba(255,255,255,0.06);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+}
+.movie-card:hover {
+  transform: translateY(-4px) scale(1.012);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.14), 0 2px 8px rgba(0,0,0,0.08);
+}
+.dark .movie-card:hover {
+  box-shadow: 0 16px 48px rgba(0,0,0,0.55);
+}
+
+/* ─── Primary button ─────────────────────────────────────────── */
+.btn-primary {
+  @apply relative inline-flex items-center gap-2 font-semibold text-white rounded-xl
+         px-6 py-3 select-none overflow-hidden;
+  background: linear-gradient(135deg, hsl(220,90%,55%) 0%, hsl(260,80%,60%) 100%);
+  box-shadow: 0 4px 20px rgba(99,102,241,0.4), 0 1px 3px rgba(0,0,0,0.2);
+  transition: transform var(--transition), box-shadow var(--transition), opacity var(--transition);
+}
+.btn-primary::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, transparent 60%);
+  border-radius: inherit;
+}
+.btn-primary:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(99,102,241,0.55), 0 2px 8px rgba(0,0,0,0.2);
+}
+.btn-primary:active {
+  transform: scale(0.97);
+  box-shadow: 0 2px 8px rgba(99,102,241,0.3);
+}
+
+/* ─── Search input ───────────────────────────────────────────── */
+.search-input {
+  @apply w-full sm:w-72 rounded-xl px-4 py-2.5 text-sm font-medium
+         outline-none border transition-all duration-200
+         bg-white/80 dark:bg-slate-800/80
+         border-slate-200 dark:border-slate-700
+         text-slate-800 dark:text-slate-100
+         placeholder:text-slate-400 dark:placeholder:text-slate-500;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06), inset 0 1px 2px rgba(255,255,255,0.8);
+}
+.dark .search-input {
+  box-shadow: 0 1px 4px rgba(0,0,0,0.3), inset 0 1px 2px rgba(255,255,255,0.04);
+}
+.search-input:focus {
+  @apply border-indigo-400 dark:border-indigo-500;
+  box-shadow: 0 0 0 3px rgba(99,102,241,0.15), 0 1px 4px rgba(0,0,0,0.06);
+}
+
+/* ─── Loading bar ────────────────────────────────────────────── */
+.progress-track {
+  @apply w-56 sm:w-72 h-1.5 rounded-full overflow-hidden;
+  background: rgba(0,0,0,0.08);
+}
+.dark .progress-track {
+  background: rgba(255,255,255,0.08);
+}
+.progress-fill {
+  height: 100%;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, hsl(220,90%,55%), hsl(260,80%,65%));
+  box-shadow: 0 0 12px rgba(99,102,241,0.6);
+  transition: width 40ms linear;
+}
+
+/* ─── Tag badge ──────────────────────────────────────────────── */
+.tag {
+  @apply inline-block text-xs font-medium rounded-full px-2.5 py-0.5;
+  background: rgba(99,102,241,0.1);
+  color: hsl(220, 80%, 55%);
+  border: 1px solid rgba(99,102,241,0.2);
+}
+.dark .tag {
+  background: rgba(99,102,241,0.18);
+  color: hsl(220, 90%, 75%);
+  border-color: rgba(99,102,241,0.25);
+}
+
+/* ─── Nav link / back button ─────────────────────────────────── */
+.nav-btn {
+  @apply inline-flex items-center gap-1.5 rounded-xl px-4 py-2 text-sm font-medium
+         border transition-all duration-200 select-none;
+  @apply bg-white/70 dark:bg-slate-800/70 border-slate-200 dark:border-slate-700
+         text-slate-700 dark:text-slate-300
+         hover:bg-white dark:hover:bg-slate-700
+         hover:text-slate-900 dark:hover:text-white;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+.nav-btn:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  transform: translateY(-1px);
+}
+
+/* ─── Toggle mode button ─────────────────────────────────────── */
+.theme-toggle {
+  @apply w-10 h-10 rounded-full flex items-center justify-center text-lg
+         border transition-all duration-200 select-none cursor-pointer;
+  @apply bg-white/70 dark:bg-slate-800/70 border-slate-200 dark:border-slate-700;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+.theme-toggle:hover {
+  transform: rotate(12deg) scale(1.1);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+
+/* ─── Trailer toggle link ────────────────────────────────────── */
+.trailer-link {
+  @apply inline-flex items-center gap-1.5 text-sm font-medium rounded-lg px-3 py-1.5
+         transition-all duration-200 cursor-pointer select-none mt-2;
+  color: hsl(220, 80%, 58%);
+  background: rgba(99,102,241,0.08);
+  border: 1px solid rgba(99,102,241,0.15);
+}
+.dark .trailer-link {
+  color: hsl(220, 90%, 72%);
+  background: rgba(99,102,241,0.14);
+  border-color: rgba(99,102,241,0.22);
+}
+.trailer-link:hover {
+  background: rgba(99,102,241,0.18);
+}
+
+/* ─── Iframe wrapper ─────────────────────────────────────────── */
+.trailer-frame {
+  @apply rounded-2xl overflow-hidden my-4;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.25);
+  aspect-ratio: 16/9;
+  width: min(560px, 90vw);
+}
+.trailer-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ─── Footer bar ─────────────────────────────────────────────── */
+.footer-bar {
+  @apply fixed bottom-0 inset-x-0 flex items-center justify-between px-5 py-3;
+  background: rgba(255,255,255,0.8);
+  border-top: 1px solid rgba(0,0,0,0.06);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 -4px 24px rgba(0,0,0,0.06);
+}
+.dark .footer-bar {
+  background: rgba(13,13,20,0.85);
+  border-top-color: rgba(255,255,255,0.06);
+  box-shadow: 0 -4px 24px rgba(0,0,0,0.3);
+}
+
+/* ─── Subtle animations ──────────────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-up {
+  animation: fadeUp 0.4s ease both;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 4px 20px rgba(99,102,241,0.4); }
+  50%       { box-shadow: 0 6px 32px rgba(99,102,241,0.7); }
+}
+.btn-primary {
+  animation: pulse-glow 2.8s ease-in-out infinite;
+}
+.btn-primary:hover, .btn-primary:active {
+  animation: none;
 }

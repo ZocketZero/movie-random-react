@@ -31,7 +31,6 @@ const Home: FC = () => {
 
   useEffect(() => {
     if (loadState === 100) {
-      // random movie when loadState === 100
       setMovie(Math.floor(Math.random() * Movies.length));
     }
     if (loadState > 0 && loadState < 100) {
@@ -44,45 +43,68 @@ const Home: FC = () => {
     }
   }, [loadState]);
 
+  const isIdle    = loadState === 0;
+  const isLoading = loadState > 0 && loadState < 100;
+  const isDone    = loadState === 100 && movie > -1;
+
   return (
     <>
       <main
-        className={` min-h-screen bg-gradient-to-tr sm:bg-gradient-to-r from-pink-300 via-white to-emerald-300 dark:from-black dark:to-black ${
-          loadState !== 100
-            ? "flex flex-col justify-center h-screen items-center"
-            : "pt-10"
-        }`}
+        className={`min-h-screen transition-colors duration-500 ${
+          isDone
+            ? "pt-10 pb-28"
+            : "flex flex-col items-center justify-center"
+        } bg-gradient-to-br from-slate-50 via-indigo-50/30 to-purple-50/20
+          dark:from-[#0d0d14] dark:via-[#11102a] dark:to-[#0b1220]`}
       >
-        <h3 className="text-3xl text-center my-2 text-slate-800 dark:text-slate-200">
-          ดูภาพยนตร์อะไรดี?🎥
-        </h3>
-        <div className="flex flex-col items-center justify-center text-center">
-          {movie > -1 && loadState === 100 ? (
+        {/* Hero area (idle + loading) */}
+        {!isDone && (
+          <div className="flex flex-col items-center gap-6 px-4 text-center fade-up">
+            {/* Cinematic film strip icon */}
+            <div className="text-5xl select-none" aria-hidden>🎬</div>
+
             <div>
-              <div className="mb-3">
-                <RandomBtn onClick={() => setLoadState(1)} />
-              </div>
-              <ShowMovie {...Movies[movie]} />
+              <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-800 dark:text-white">
+                ดูภาพยนตร์อะไรดี?
+              </h1>
+              {isIdle && (
+                <p className="mt-2 text-base text-slate-500 dark:text-slate-400">
+                  อยากดูหนังสักเรื่อง แต่เลือกไม่ถูก — กดแล้วจะรู้!
+                </p>
+              )}
             </div>
-          ) : loadState !== 0 ? (
-            <LoadingStatus loadState={loadState} />
-          ) : (
-            <div className="text-center">
-              <div className="text-center text-lg my-3 dark:text-slate-200">
-                อยากดูหนังสักเรื่อง แต่เลือกไม่ถูก กดเลย!
-              </div>
-              <RandomBtn onClick={() => setLoadState(1)} />
-            </div>
-          )}
-        </div>
-      </main>
-      {Movies.map((mv, idx) => {
-        return (
-          <div key={idx} className="text-center">
-            <img className="hidden" key={idx} src={mv.img} alt={mv.name} />
+
+            {isIdle  && <RandomBtn onClick={() => setLoadState(1)} />}
+            {isLoading && <LoadingStatus loadState={loadState} />}
+
+            {isIdle && (
+              <p className="text-xs text-slate-400 dark:text-slate-600 mt-2">
+                หรือกด <kbd className="px-1.5 py-0.5 rounded bg-slate-100 dark:bg-slate-800 font-mono text-[11px] border border-slate-200 dark:border-slate-700">R</kbd> บนคีย์บอร์ด
+              </p>
+            )}
           </div>
-        );
-      })}
+        )}
+
+        {/* Result area */}
+        {isDone && (
+          <div className="flex flex-col items-center gap-4 px-4">
+            <div className="text-center fade-up">
+              <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-800 dark:text-white mb-1">
+                ดูภาพยนตร์อะไรดี?
+              </h1>
+              <p className="text-sm text-slate-500 dark:text-slate-400">ผลลัพธ์แบบสุ่มสำหรับคืนนี้</p>
+            </div>
+            <RandomBtn onClick={() => setLoadState(1)} />
+            <ShowMovie {...Movies[movie]} />
+          </div>
+        )}
+      </main>
+
+      {/* Preload images */}
+      {Movies.map((mv, idx) => (
+        <img key={idx} className="hidden" src={mv.img} alt="" aria-hidden />
+      ))}
+
       <Footer />
     </>
   );

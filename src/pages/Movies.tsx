@@ -5,45 +5,86 @@ import movies from "../Data/Movies.json";
 
 const Movies: FC = () => {
   const [searchKey, setSearchKey] = useState<string>("");
+
   useEffect(() => {
     document.title = "ภาพยนตร์ทั้งหมด";
   }, []);
 
-  // for search movies
   const MovieSearched = movies.filter(
     (m) =>
-      // search with name
       m.name.toLowerCase().includes(searchKey.toLocaleLowerCase()) ||
-      // search with year
       m.year.includes(searchKey) ||
-      // search with categories
       m.categories.toLocaleLowerCase().includes(searchKey) ||
-      // search with tag
       m.tag.toLocaleLowerCase().includes(searchKey)
   );
 
   return (
-    <main className="frame">
-      <div className="mb-3 mt-3 px-3 flex flex-wrap items-center justify-between">
-        <Link to={"/"}>
-          <span className="left-0 p-2 m-3 bg-emerald-400 dark:bg-black hover:bg-emerald-500 dark:hover:bg-white text-white dark:text-slate-200 dark:hover:text-black shadow-md dark:shadow shadow-emerald-300 dark:shadow-transparent dark:border dark:border-white rounded transition-all duration-300">
+    <main
+      className="frame min-h-screen pb-24 bg-gradient-to-br
+                 from-slate-50 via-indigo-50/30 to-purple-50/20
+                 dark:from-[#0d0d14] dark:via-[#11102a] dark:to-[#0b1220]"
+    >
+      {/* Sticky top bar */}
+      <div
+        className="sticky top-0 z-40 px-4 sm:px-6 py-3 flex flex-wrap gap-3 items-center justify-between
+                   bg-white/80 dark:bg-[#0d0d14]/85
+                   border-b border-slate-100 dark:border-slate-800
+                   backdrop-blur-md"
+      >
+        <Link to="/" id="back-link">
+          <span className="nav-btn">
+            <svg
+              className="w-4 h-4"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              aria-hidden
+            >
+              <path
+                fillRule="evenodd"
+                d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                clipRule="evenodd"
+              />
+            </svg>
             ย้อนกลับ
           </span>
         </Link>
-        <span className=" text-center m-3 w-full sm:w-auto">
+
+        <div className="flex items-center gap-3 flex-1 justify-end">
+          <span className="text-xs text-slate-400 dark:text-slate-500 hidden sm:inline">
+            {MovieSearched.length} เรื่อง
+          </span>
           <input
-            className="px-2 py-1 w-auto focus:outline-none rounded-md shadow-md shadow-zinc-300 dark:shadow-zinc-500"
+            id="movie-search"
+            className="search-input"
             type="search"
-            placeholder="search movies here"
+            placeholder="ค้นหาภาพยนตร์…"
             onChange={(e) => setSearchKey(e.target.value)}
             value={searchKey}
+            autoComplete="off"
           />
-        </span>
+        </div>
       </div>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4">
-        {MovieSearched.map((mv, key) => {
-          return (
-            <div key={key} className="my-3">
+
+      {/* Page title */}
+      <div className="px-4 sm:px-6 pt-6 pb-3">
+        <h1 className="text-2xl font-bold tracking-tight text-slate-800 dark:text-white">
+          ภาพยนตร์ทั้งหมด
+        </h1>
+        <p className="text-sm text-slate-500 dark:text-slate-400 mt-0.5">
+          {searchKey
+            ? `พบ ${MovieSearched.length} เรื่องสำหรับ "${searchKey}"`
+            : `มีทั้งหมด ${movies.length} เรื่อง`}
+        </p>
+      </div>
+
+      {/* Grid */}
+      {MovieSearched.length > 0 ? (
+        <div
+          className="grid gap-4 px-4 sm:px-6 py-2
+                     grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6"
+        >
+          {MovieSearched.map((mv, key) => (
+            <div key={key} className="flex justify-center">
               <ShowMovie
                 name={mv.name}
                 img={mv.img}
@@ -53,10 +94,19 @@ const Movies: FC = () => {
                 tag={mv.tag}
               />
             </div>
-          );
-        })}
-      </div>
-      <div className="h-20"></div>
+          ))}
+        </div>
+      ) : (
+        <div className="flex flex-col items-center justify-center py-24 text-center fade-up">
+          <div className="text-5xl mb-4">🔍</div>
+          <p className="text-lg font-semibold text-slate-700 dark:text-slate-300">
+            ไม่พบภาพยนตร์
+          </p>
+          <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">
+            ลองค้นหาด้วยคำอื่น
+          </p>
+        </div>
+      )}
     </main>
   );
 };
